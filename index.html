@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="container">
-    <!-- <article class="start">
+    <article class="start">
       <h1 class="mt-5 text-center">나랑 꼭 닮은 세렝게티 동물은?</h1>
       <button type="button" class="btn btn-primary mt-5" onclick="start();">
         테스트 시작하기
       </button>
-    </article> -->
+    </article>
     <article class="question">
       <div
         class="progress mt-5"
@@ -28,7 +28,7 @@
         aria-valuemin="0"
         aria-valuemax="100"
       >
-        <div class="progress-bar" style="width: 25%"></div>
+        <div class="progress-bar" style="width: calc(100/12*10%)"></div>
       </div>
       <h2 id="title" class="text-center mt-5">문제</h2>
       <input id="type" type="hidden" value="EI" />
@@ -72,6 +72,7 @@
         next();
       });
       function next() {
+        $(".progress-bar").attr('style', 'width: calc(100/12*'+ num +'%)');
         $("#title").html(q[num]["title"]);
         $("#type").val(q[num]["type"]);
         $("#A").html(q[num]["A"]);
