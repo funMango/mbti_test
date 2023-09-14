@@ -13,14 +13,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="container">
-    <article class="start">
+    <!-- <article class="start">
       <h1 class="mt-5 text-center">나랑 꼭 닮은 세렝게티 동물은?</h1>
       <button type="button" class="btn btn-primary mt-5" onclick="start();">
         테스트 시작하기
       </button>
-    </article>
+    </article> -->
     <article class="question">
-      <h2>문제</h2>
+      <div
+        class="progress mt-5"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="25"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+      <h2 class="text-center mt-5">문제</h2>
+      <button type="button" class="btn btn-primary mt-5">Primary</button>
+      <button type="button" class="btn btn-primary mt-5">Primary</button>
     </article>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
